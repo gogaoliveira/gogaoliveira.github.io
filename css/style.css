@@ -31,12 +31,17 @@
     padding-left: 1rem;
 }
 
-.profile-img{
+.profile-image{
     display: block;
     width: 65px;
+    padding-right: 1rem;
 }
 
-.profile-img img{
+.profile-image img{
     border-radius: 50%;
     max-width: 100%;
+}
+
+.status{
+    text-transform: capitalize;
 }
