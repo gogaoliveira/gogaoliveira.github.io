@@ -23,6 +23,13 @@
 }
 
 /* Menu Profile */
+.menu{
+    width: 65%;
+    height: 100vh;
+    background-color: #222d32;
+    color: #ffffff;
+    position: absolute;
+}
 
 .profile{
     display: flex;
@@ -43,5 +50,17 @@
 }
 
 .status{
+    display: flex;
+    align-items: center;
     text-transform: capitalize;
+}
+
+.status::before{
+    content: '';
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    display: block;
+    background-color: green;
+    margin-right: 1rem;
 }
