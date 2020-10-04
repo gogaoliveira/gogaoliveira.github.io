@@ -1,0 +1,16 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.header{
+    display: flex;
+}
+
+.logo img{
+    max-width: 100%;
+}
+
+.profile-img img{
+    max-width: 100%;
+}
