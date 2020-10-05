@@ -14,11 +14,18 @@ menuDoc.addEventListener('click', function(){
 */
 
 var iconMenu = document.querySelector('.icon-menu');
-var menu = document.querySelector('.menu');
 var content = document.querySelector('.content');
+let body = document.querySelector("body");
 
 iconMenu.addEventListener('click', function(){
-    menu.classList.toggle('menu-move');
-    content.classList.toggle('content-move');
+    
+    body.classList.toggle("_move")
+
+});
+
+/*recolhendo menu cliicando no content*/
+
+content.addEventListener('click', function(){
+    body.classList.remove('_move');
 });
 
