@@ -34,6 +34,7 @@ body{
     background-color: #222d32;
     color: #ffffff;
     position: absolute;
+    left: -65%;
 }
 
 .profile{
@@ -107,4 +108,9 @@ body{
     text-decoration: none;
     padding: 0 0 1rem 2.8rem;
     display: block;
+}
+
+/* menu hamburguer*/
+.menu-move{
+    left: 0;
 }
