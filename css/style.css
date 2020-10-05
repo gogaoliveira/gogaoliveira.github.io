@@ -77,14 +77,34 @@ body{
     display: block;
 }
 
+.link-nav-arrow::after {
+    content: '\f107';
+    font-weight: 900;
+    font-family: "Font Awesome 5 Free";
+    display: inline-block;
+    transform: rotate(90deg);
+    margin-left: 1.5rem;
+}
+.link-nav-arrow.arrow::after{
+    transform: rotate(0);
+}
+
 .list-nav{
     padding-top: 1rem;
 }
 
-.list-nav-second{
-    display: none;
-}
-
 .icon{
     width: 1.5rem;
+}
+
+/* menu secundario */
+
+.hide {
+    display: none;
+}
+.item-nav-second a{
+    color: #ffffff;
+    text-decoration: none;
+    padding: 0 0 1rem 2.8rem;
+    display: block;
 }
