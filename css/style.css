@@ -1,8 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
 *{
     margin: 0;
     padding: 0;
 }
 
+body{
+    font-family: 'Open Sans', sans-serif;
+}
 /* header */
 
 .header{
@@ -40,7 +45,7 @@
 
 .profile-image{
     display: block;
-    width: 65px;
+    width: 55px;
     padding-right: 1rem;
 }
 
@@ -63,4 +68,23 @@
     display: block;
     background-color: green;
     margin-right: 1rem;
+}
+
+.link-nav{
+    color: #ffffff;
+    text-decoration: none;
+    padding: 1rem;
+    display: block;
+}
+
+.list-nav{
+    padding-top: 1rem;
+}
+
+.list-nav-second{
+    display: none;
+}
+
+.icon{
+    width: 1.5rem;
 }
