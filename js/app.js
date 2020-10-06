@@ -37,8 +37,8 @@ linkNavs.forEach(function(currentValue, index, array){
 
     currentValue.addEventListener('click', function(){
 
-        linkNavs.forEach(function(elemento){
-            elemento.classList.remove('active');
+        linkNavs.forEach((elemento)=>{
+            elemento.classList.remove('active')
         })
 
         currentValue.classList.toggle('active');
