@@ -70,12 +70,22 @@ body{
     background-color: green;
     margin-right: 1rem;
 }
+.link-nav.active::before{
+    content: '';
+    background-color: #3498db;
+    width: 5px;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0%;
+}
 
 .link-nav{
     color: #ffffff;
     text-decoration: none;
     padding: 1rem;
     display: block;
+    position: relative;
 }
 
 .link-nav-arrow::after {

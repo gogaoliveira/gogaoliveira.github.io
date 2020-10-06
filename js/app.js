@@ -29,3 +29,25 @@ content.addEventListener('click', function(){
     body.classList.remove('_move');
 });
 
+/* Menu Ativo - inserindo a class active */
+
+let linkNavs = document.querySelectorAll(".link-nav");
+
+linkNavs.forEach(function(currentValue, index, array){
+
+    currentValue.addEventListener('click', function(){
+
+        linkNavs.forEach(function(elemento){
+            elemento.classList.remove('active');
+        })
+
+        currentValue.classList.toggle('active');
+
+
+    })
+
+})
+
+
+
+
