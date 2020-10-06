@@ -50,4 +50,3 @@ linkNavs.forEach(function(currentValue, index, array){
 
 
 
-
