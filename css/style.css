@@ -154,7 +154,7 @@ body{
     height: 100%;
 }
 
-.imgSlide:nth-of-type(1){}
+/*.imgSlide:nth-of-type(1){}*/
 .imgSlide:nth-of-type(2){
     animation-delay: 5s;
 }
