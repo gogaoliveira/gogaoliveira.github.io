@@ -81,6 +81,7 @@ const quiz = [
 const questionNumber = document.querySelector(".question-number");
 const questionText = document.querySelector(".question-text");
 const optionContainer = document.querySelector(".option-container");
+const answersIndicatorContainer = document.querySelector(".answers-indicator");
 
 let questionCounter = 0;
 let currentQuestion;
@@ -144,8 +145,18 @@ function getResult(element){
     const id = parseInt(element.id);
     if(id === currentQuestion.answer){
         element.classList.add("correct");
-    }else{
+        updateAnswerIndicator("correct")
+;    }else{
         element.classList.add("wrong");
+        updateAnswerIndicator("wrong");
+
+        const optionLen = optionContainer.children.length;
+        for (let i = 0; i < optionLen; i++) {
+            if(parseInt(optionContainer.children[i].id) === currentQuestion.answer){
+                optionContainer.children[i].classList.add("correct");
+            }
+            
+        }
     }
 
     unclickableOptions();   
@@ -159,6 +170,20 @@ function unclickableOptions(){
     }
 }
 
+function answersIndicator(){
+    const totalQuestion = quiz.length
+    for (let i = 0; i < totalQuestion; i++) {
+        const indicador = document.createElement("div");
+        answersIndicatorContainer.appendChild(indicador);
+
+        
+    }
+}
+
+function updateAnswerIndicator(markType){
+    answersIndicatorContainer.children[questionCounter - 1].classList.add(markType);
+}
+
 function next(){
     if (questionCounter === quiz.length) {
         console.log("quiz over")
@@ -170,6 +195,7 @@ function next(){
 window.onload = function(){
     setAvaibleQuestions();
     getNewQuestion();
+    answersIndicator();
 }
 
 

@@ -526,6 +526,21 @@ body{
     margin-top: 15px;
 }
 
+.quiz-box .answers-indicator div.correct{
+    background-color: green;
+    background-image: url("../img/correct-icon.png");
+    background-size: 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.quiz-box .answers-indicator div.wrong{
+    background-color: red;
+    background-image: url("../img/wrong-icon.png");
+    background-size: 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
 .result-box{
     text-align: center;
 }
