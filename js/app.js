@@ -1,8 +1,8 @@
 /* Menu Secundario */
-var menuDoc = document.getElementsByClassName('.link-nav-arrow')[0];
-var listSecond = document.querySelector('.list-nav-second');
+let menuDoc = document.querySelector('.link-nav-arrow')[0];
+let listSecond = document.querySelector('.list-nav-second');
 
-menuDoc.addEventListener('click', function(){
+window.addEventListener('click', function(){
 
     listSecond.classList.toggle('hide');
     menuDoc.classList.toggle('arrow');
