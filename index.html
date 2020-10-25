@@ -73,13 +73,13 @@
                 <img src="img/2.jpg" class="imgSlide" alt="">
             </div>
             <div class="quiz">
-                <div class="home-box custom-box ">
+                <div class="home-box custom-box">
                     <h3>Intruction: </h3>
-                    <p>Total number of question:5 <span class="total-question"></span></p>
-                    <button type="button" class="btn">Start Quiz</button>
+                    <p>Total number of question: <span class="total-question"></span></p>
+                    <button type="button" class="btn" onclick="startQuiz()">Start Quiz</button>
                 </div>
         
-                <div class="quiz-box custom-box">
+                <div class="quiz-box custom-box hide">
                     <div class="question-number">
                        
                     </div>
@@ -98,36 +98,36 @@
                     </div>
                 </div>
         
-                <div class="result-box custom-box">
+                <div class="result-box custom-box hide">
                     <h1>Quiz Resultados</h1>
                     <table>
                         <tr>
                             <td>Total Questions</td>
-                            <td><span class="total-question">5</span></td>
+                            <td><span class="total-question"></span></td>
                         </tr>
                         <tr>
                             <td>Attempt</td>
-                            <td><span class="total-attempt">4</span></td>
+                            <td><span class="total-attempt"></span></td>
                         </tr>
                         <tr>
                             <td>Correct</td>
-                            <td><span class="total-correct">3</span></td>
+                            <td><span class="total-correct"></span></td>
                         </tr>
                         <tr>
                             <td>Wrong</td>
-                            <td><span class="total-wrong">1</span></td>
+                            <td><span class="total-wrong"></span></td>
                         </tr>
                         <tr>
                             <td>Percentage</td>
-                            <td><span class="percentage">60.00%</span></td>
+                            <td><span class="percentage"></span></td>
                         </tr>
                         <tr>
                             <td>Your total score</td>
-                            <td><span class="total-score">3 / 5</span></td>
+                            <td><span class="total-score"></span></td>
                         </tr>
                     </table>
-                    <button type="button" class="btn">try again</button>
-                    <button type="button" class="btn">go to home</button>
+                    <button type="button" class="btn" onclick="tryAgainQuiz()">try again</button>
+                    <button type="button" class="btn" onclick="goToHome()">go to home</button>
                 </div>
         
             </div>

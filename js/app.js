@@ -82,11 +82,16 @@ const questionNumber = document.querySelector(".question-number");
 const questionText = document.querySelector(".question-text");
 const optionContainer = document.querySelector(".option-container");
 const answersIndicatorContainer = document.querySelector(".answers-indicator");
+const homeBox = document.querySelector(".home-box");
+const quizBox = document.querySelector(".quiz-box");
+const resultBox = document.querySelector(".result-box");
 
 let questionCounter = 0;
 let currentQuestion;
 let availableQuestions = [];
 let availableOptions = [];
+let correctAnswers = 0;
+let attempt = 0;
 
 function setAvaibleQuestions(){
     const totalQuestion = quiz.length;
@@ -145,8 +150,9 @@ function getResult(element){
     const id = parseInt(element.id);
     if(id === currentQuestion.answer){
         element.classList.add("correct");
-        updateAnswerIndicator("correct")
-;    }else{
+        updateAnswerIndicator("correct");
+        correctAnswers++;        
+    }else{
         element.classList.add("wrong");
         updateAnswerIndicator("wrong");
 
@@ -158,7 +164,7 @@ function getResult(element){
             
         }
     }
-
+    attempt++;
     unclickableOptions();   
 }
 
@@ -171,6 +177,7 @@ function unclickableOptions(){
 }
 
 function answersIndicator(){
+    answersIndicatorContainer.innerHTML = '';
     const totalQuestion = quiz.length
     for (let i = 0; i < totalQuestion; i++) {
         const indicador = document.createElement("div");
@@ -186,18 +193,59 @@ function updateAnswerIndicator(markType){
 
 function next(){
     if (questionCounter === quiz.length) {
-        console.log("quiz over")
+        quizOver();
     }else{
         getNewQuestion();
     }
 }
 
-window.onload = function(){
+function quizOver(){
+    quizBox.classList.add("hide");
+    resultBox.classList.remove("hide");
+    quizResult();
+}
+
+function quizResult(){
+    resultBox.querySelector(".total-question").innerHTML = quiz.length;
+    resultBox.querySelector(".total-attempt").innerHTML = attempt;
+    resultBox.querySelector(".total-correct").innerHTML = correctAnswers
+    resultBox.querySelector(".total-wrong").innerHTML = attempt - correctAnswers;
+    const percentage = (correctAnswers/quiz.length)*100;
+    resultBox.querySelector(".percentage").innerHTML = percentage.toFixed(2)+"%";
+    resultBox.querySelector(".total-score").innerHTML = correctAnswers+" / "+quiz.length;
+}
+
+function resetQuiz(){
+    questionCounter = 0;
+    correctAnswers = 0;
+    attempt = 0;
+}
+
+function tryAgainQuiz(){
+    resultBox.classList.add("hide");
+    quizBox.classList.remove("hide");
+    resetQuiz();
+    startQuiz();
+
+}
+
+function goToHome(){
+    resultBox.classList.add("hide");
+    homeBox.classList.remove("hide")
+}
+
+function startQuiz(){
+
+    homeBox.classList.add("hide");
+    quizBox.classList.remove("hide");
     setAvaibleQuestions();
     getNewQuestion();
     answersIndicator();
 }
 
+window.onload = function(){
+    homeBox.querySelector(".total-question").innerHTML = quiz.length;
+}
 
 
 
