@@ -7,6 +7,16 @@
    <!-- Template css Files -->
 	<link rel="stylesheet" href="css/style.css" type="text/css">
   <link rel="stylesheet" href="css/skins/pink.css" type="text/css">
+
+  <!-- Live Style Sqitcher - Demo Only -->
+  <link rel="stylesheet" class="alternate-style" title="pink" href="css/skins/pink.css" type="text/css" disabled>
+  <link rel="stylesheet" class="alternate-style" title="blue" href="css/skins/blue.css" type="text/css" disabled>
+  <link rel="stylesheet" class="alternate-style" title="orange" href="css/skins/orange.css" type="text/css" disabled>
+  <link rel="stylesheet" class="alternate-style" title="yellow" href="css/skins/yellow.css" type="text/css" disabled >
+  <link rel="stylesheet" class="alternate-style" title="grenn" href="css/skins/grenn.css" type="text/css" disabled>
+
+  <link rel="stylesheet" href="css/styleSwitcher.css" type="text/css">
+
 </head>
 <body>
 
@@ -567,9 +577,29 @@
   </div>
   <!-- Lightbox END-->
 
+  <!-- live style switcher demo only -->  
+    <div class="style-switcher">
+      <h5>style switcher</h5>
+        <ul>
+          <li><a href="javascript:void(0);" title="pink" style="background-color: #ec1839" onclick="setActiveStyle('pink')"></a></li>
+          <li><a href="javascript:void(0);" title="blue" style="background-color: #2196f3" onclick="setActiveStyle('blue')"></a></li>
+          <li><a href="javascript:void(0);" title="orange" style="background-color: #fa5b0f" onclick="setActiveStyle('orange')"></a></li>
+          <li><a href="javascript:void(0);" title="yellow" style="background-color: #ffb400" onclick="setActiveStyle('yellow')"></a></li>
+          <li><a href="javascript:void(0);" title="grenn" style="background-color: #72b626" onclick="setActiveStyle('grenn')"></a></li>
+        </ul>
+    </div>
+  
+  <!-- live style switcher demo only end-->
+
 
   <!-- Template JS -->
   <script src="js/script.js"></script>
+
+  <!-- live style js demo only -->
+  <script src="js/styleSwitcher.js"></script>
+
+  <!-- live style js demo only  end-->
+
 </body>
 </html>
 
